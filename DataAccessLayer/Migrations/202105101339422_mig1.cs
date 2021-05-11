@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Migrations
+﻿ namespace DataAccessLayer.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
