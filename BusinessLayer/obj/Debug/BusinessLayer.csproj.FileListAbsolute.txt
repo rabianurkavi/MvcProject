@@ -4,3 +4,15 @@ C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\obj\Debug\BusinessLayer
 C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\EntityLayer.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\EntityLayer.pdb
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete

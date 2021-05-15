@@ -84,3 +84,16 @@ C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\obj\Debug\MvcProjectCa
 C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\obj\Debug\MvcProjectCamp.csproj.CopyComplete
 C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\obj\Debug\MvcProjectCamp.dll
 C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\obj\Debug\MvcProjectCamp.pdb
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\BusinessLayer.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\EntityFramework.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\EntityFramework.SqlServer.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\EntityLayer.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\DataAccessLayer.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\BusinessLayer.pdb
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\BusinessLayer.dll.config
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\EntityLayer.pdb
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\EntityLayer.dll.config
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\EntityFramework.xml
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\EntityFramework.SqlServer.xml
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\DataAccessLayer.pdb
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\DataAccessLayer.dll.config
