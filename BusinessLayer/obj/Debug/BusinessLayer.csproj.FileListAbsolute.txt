@@ -16,3 +16,5 @@ C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\EntityLayer.d
 C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\EntityFramework.xml
 C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\FluentValidation.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\BusinessLayer\bin\Debug\FluentValidation.xml

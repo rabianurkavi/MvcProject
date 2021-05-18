@@ -97,3 +97,5 @@ C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\EntityFramework.xm
 C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\EntityFramework.SqlServer.xml
 C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\DataAccessLayer.pdb
 C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\DataAccessLayer.dll.config
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\FluentValidation.dll
+C:\Users\Hakan\source\repos\MvcProjectCamp\MvcProjectCamp\bin\FluentValidation.xml
