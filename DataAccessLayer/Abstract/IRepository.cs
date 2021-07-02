@@ -16,5 +16,6 @@ namespace DataAccessLayer.Abstract
         void Update(T t);
         //filtreleme işlemleri yapacak örneğin yazar adı ali olanları getir gibi
         List<T> List(Expression<Func<T, bool>> filter);
+        T Get(Expression<Func<T, bool>> filter);
     }
 }

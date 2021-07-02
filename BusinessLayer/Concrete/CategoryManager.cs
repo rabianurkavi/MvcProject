@@ -24,6 +24,21 @@ namespace BusinessLayer.Concrete
             _categoryDal.Insert(category);
         }
 
+        public void CategoryDeleteBL(Category category)
+        {
+            _categoryDal.Delete(category);
+        }
+
+        public Category CategoryGetByIdBL(int id)
+        {
+           return _categoryDal.Get(x=>x.CategoryId==id);//genericrepository içindeki değerleri alıyor
+        }
+
+        public void CategoryUpdate(Category category)
+        {
+            _categoryDal.Update(category);
+        }
+
         //GenericRepository<Category> repository = new GenericRepository<Category>();
         //public List<Category> GetAll()
         //{
@@ -44,6 +59,11 @@ namespace BusinessLayer.Concrete
         public List<Category> GetList()
         {
             return _categoryDal.List();
+        }
+
+        public void ToplamKategori(Category category)
+        {
+            
         }
     }
 }

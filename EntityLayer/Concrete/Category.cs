@@ -18,6 +18,6 @@ namespace EntityLayer.Concrete
         //durum
         public bool CategoryStatus { get; set; }
 
-        public ICollection<Heading> Headings { get; set; }
+        public ICollection<Heading> Headings { get; set; }//başka bir classın ürünleriyle ilişkilendirmek için
     }
 }
