@@ -17,3 +17,4 @@ C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessL
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\bin\Debug\FluentValidation.dll
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\bin\Debug\FluentValidation.xml
+C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_edit.resources
