@@ -32,16 +32,16 @@
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                             <div class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
-                                    Digital Strategist
+                                    @item.WriterTitle
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
                                             <h2 class="lead"><b>@item.WriterName @item.WriterSurName </b></h2>
-                                            <p class="text-muted text-sm"><b>Hakkında: </b> @item.WriterAbout </p>
-                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                            <p class="os-text-inherit text-sm"><b>Hakkında: </b> @item.WriterAbout </p>
+                                            <ul class="ml-4 mb-0 fa-ul os-text-inherit">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Mail:@item.WriterMail</li>
-                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: + 800 - 12 12 23 52</li>
+                                                
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
@@ -54,7 +54,7 @@
                                         <a href="#" class="btn btn-sm bg-teal">
                                             <i class="fas fa-comments">Yazarın Başlıkları</i>
                                         </a>
-                                        <a href="#" class="btn btn-sm btn-primary">
+                                        <a href="/Writer/UpdateWriter/@item.WriterId" class="btn btn-sm btn-primary">
                                             <i class="fas fa-user"></i> Profili Düzenle
                                         </a>
                                     </div>
