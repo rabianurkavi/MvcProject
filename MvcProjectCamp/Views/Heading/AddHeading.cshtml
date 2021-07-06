@@ -12,15 +12,14 @@
         @Html.Label("Başlık Adı")
         @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.HeadingName)
-        <br /><br />
+        <br />
         @Html.Label("Kategori")
-        @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.CategoryId)
-        <br /><br />
+        @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.vlc, new {@class="form-control"})
+        <br />
         @Html.Label("Yazar")
-        @Html.TextBoxFor(x => x.WriterId, new { @class = "form-control" })
+        @Html.DropDownListFor(x => x.WriterId, (List<SelectListItem>)ViewBag.vlw, new {@class="form-control"})
         @Html.ValidationMessageFor(x => x.WriterId)
-        <br /><br />
+        <br />
         <button class="btn btn-info">Başlığı Oluştur</button>
     </div>
 }

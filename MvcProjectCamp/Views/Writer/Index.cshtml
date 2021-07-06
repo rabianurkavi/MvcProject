@@ -41,11 +41,11 @@
                                             <p class="os-text-inherit text-sm"><b>Hakkında: </b> @item.WriterAbout </p>
                                             <ul class="ml-4 mb-0 fa-ul os-text-inherit">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Mail:@item.WriterMail</li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img src="~/AdminLTE-3.0.4/dist/img/user1-128x128.jpg" alt="" class="img-circle img-fluid">
+                                            <img src="@item.WriterImage" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -69,6 +69,7 @@
 
     </section>
     <!-- /.content -->
+    <a href="/Writer/AddWriter/" class="btn btn-info">Yeni Yazar Ekle</a>
 </body>
 </html>
 

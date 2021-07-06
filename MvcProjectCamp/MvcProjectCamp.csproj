@@ -1987,6 +1987,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="image\anaekran.jpg" />
+    <Content Include="image\ayse.jpg" />
+    <Content Include="image\büsra.jpg" />
+    <Content Include="image\canan.jpg" />
+    <Content Include="image\hakan.jpg" />
+    <Content Include="image\rabia.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="AdminLTE-3.0.4\.babelrc" />
