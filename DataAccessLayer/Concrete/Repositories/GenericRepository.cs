@@ -40,11 +40,12 @@ namespace DataAccessLayer.Concrete.Repositories
             context.SaveChanges();
         }
 
+        //Normal list
         public List<T> List()
         {
             return _object.ToList(); 
         }
-
+        //Parametreli list
         public List<T> List(Expression<Func<T, bool>> filter)
         {
             return _object.Where(filter).ToList();

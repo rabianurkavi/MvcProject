@@ -20,3 +20,4 @@ C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\bin\Debug\FluentValid
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_edit.resources
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migwritertitleadd.resources
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_imagesizechange.resources
+C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_addstatus.resources
