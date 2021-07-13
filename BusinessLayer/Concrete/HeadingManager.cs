@@ -34,7 +34,9 @@ namespace BusinessLayer.Concrete
 
         public void HeadingDelete(Heading heading)
         {
-            _headingDal.Delete(heading);
+            //Projede başlık silme işlemi yerine statusunu truedan false a alıp bu sayede eski bilgileri arşive eklemiş olmak istiyorum.
+            //_headingDal.Delete(heading);
+            _headingDal.Update(heading);
         }
 
         public void HeadingUpdate(Heading heading)

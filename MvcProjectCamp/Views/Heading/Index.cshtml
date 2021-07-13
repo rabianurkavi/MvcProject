@@ -4,7 +4,11 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-@{ string color = "";}
+@{ string color = "";
+    string colorstatus = "";
+    string statusname = "";
+    string iconname = "";
+}
 
 @*<br/>
     <table class="table table-bordered">
@@ -70,8 +74,11 @@
                             <th style="width: 20%">
                                 Başlık Adı
                             </th>
-                            <th style="width: 30%">
+                            <th style="width: 15%">
                                 Oluşturan Yazar
+                            </th>
+                            <th style="width: 30%">
+                                Durum
                             </th>
                             <th style="width: 8%" class="text-center">
                                 Kategori
@@ -127,7 +134,19 @@
                             {
                                 color = "badge badge-danger";
                             }
-                            
+                            if (item.HeadingStatus == false)
+                            {
+                                colorstatus = "btn btn-success";
+                                iconname = "fa fa-play-circle";
+                                statusname = "Aktif";
+                            }
+                            if (item.HeadingStatus == true)
+                            {
+                                colorstatus = "btn btn-danger";
+                                iconname = "fa fa-pause-circle";
+                                statusname = "Pasif";
+                            }
+
 
                             <tr>
                                 <td>
@@ -150,6 +169,9 @@
                                         </li>
                                     </ul>
                                 </td>
+                                <td >
+                                     @item.HeadingStatus
+                                </td>
                                 <td class="project-state">
                                     <span class="@color">@item.Category.CategoryName</span>
                                 </td>
@@ -160,15 +182,15 @@
                                         </i>
                                         İçerikler
                                     </a>
-                                    <a class="btn btn-info btn-sm" href="#">
+                                    <a class="btn btn-info btn-sm" href="/Heading/UpdateHeading/@item.HeadingId">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Düzenle
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="#">
-                                        <i class="fas fa-trash">
+                                    <a class="@colorstatus" href="/Heading/DeleteHeading/@item.HeadingId">
+                                        <i class="@iconname">
                                         </i>
-                                        Sil
+                                        @statusname
                                     </a>
                                 </td>
                             </tr>

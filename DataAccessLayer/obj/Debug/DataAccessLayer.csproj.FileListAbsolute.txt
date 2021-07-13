@@ -21,3 +21,5 @@ C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessL
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migwritertitleadd.resources
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_imagesizechange.resources
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_addstatus.resources
+C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contentstatusadd.resources
+C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_headingstatusadd.resources
