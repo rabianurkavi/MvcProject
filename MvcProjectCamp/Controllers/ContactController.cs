@@ -19,5 +19,14 @@ namespace MvcProjectCamp.Controllers
             var contactValues = contactManager.GetList();
             return View(contactValues);
         }
+        public ActionResult GetContactDetails(int id)
+        {
+            var contactValues = contactManager.GetById(id);
+            return View(contactValues);
+        }
+        public PartialViewResult ContactPartial()
+        {
+            return PartialView();
+        }
     }
 }

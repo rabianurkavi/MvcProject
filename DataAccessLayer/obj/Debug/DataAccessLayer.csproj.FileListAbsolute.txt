@@ -23,3 +23,4 @@ C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessL
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_addstatus.resources
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_contentstatusadd.resources
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_headingstatusadd.resources
+C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_message.resources
