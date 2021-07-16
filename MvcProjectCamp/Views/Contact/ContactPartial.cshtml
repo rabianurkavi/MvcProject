@@ -1,5 +1,6 @@
-﻿<div class="col-md-3">
-    <a href="compose.html" class="btn btn-primary btn-block mb-3">Gelen Kutusu</a>
+﻿
+<div class="col-md-3">
+    <a href="/Message/NewMessage/" class="btn btn-primary btn-block mb-3">Yeni Mesaj Oluştur</a>
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Seçenekler</h3>
@@ -13,19 +14,20 @@
             <ul class="nav nav-pills flex-column">
                 <li class="nav-item active">
                     <a href="/Contact/Index/" class="nav-link">
-                        <i class="fa fa-tty"></i> İletişim 
-                        <span class="badge bg-primary float-right">12</span>
+                        <i class="fa fa-tty">@ViewBag.vlc</i> İletişim
+                        <span class="badge bg-primary float-right">@ViewBag.vlc</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a href="/Message/Inbox/" class="nav-link">
                         <i class="fas fa-inbox"></i> Gelen Mesajlar
-                        <span class="badge bg-primary float-right">12</span>
+                        <span class="badge bg-primary float-right">@ViewBag.inMail </span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/Message/SendBox" class="nav-link">
                         <i class="far fa-envelope"></i> Gönderilen Mesajlar
+                        <span class="badge bg-primary float-right">@ViewBag.sendMail </span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -36,7 +38,7 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="fas fa-filter"></i> Spam
-                        <span class="badge bg-warning float-right">65</span>
+                        <span class="badge bg-warning float-right">1</span>
                     </a>
                 </li>
                 <li class="nav-item">

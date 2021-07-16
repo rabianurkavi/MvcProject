@@ -12,7 +12,9 @@ namespace BusinessLayer.Abstract
         void MessageAdd(Message message);
         void MessageDelete(Message message);
         void MessageUpdate(Message message);
-        List<Message> GetList();
+        List<Message> GetListInbox();
+        List<Message> GetListSendbox();
+        List<Message> GetListDrafts();//taslaklar
         Message GetByID(int id);
     }
 }
