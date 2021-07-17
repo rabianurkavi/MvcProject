@@ -13,6 +13,7 @@ namespace MvcProjectCamp.Controllers
 {
     public class MessageController : Controller
     {
+        MessageValidator messageValidator = new MessageValidator();
         MessageManager messageManager = new MessageManager(new EfMessageDal());
 
         // GET: Message
@@ -44,12 +45,14 @@ namespace MvcProjectCamp.Controllers
         [HttpPost]
         public ActionResult NewMessage(Message message)
         {
-            MessageValidator messageValidator = new MessageValidator();
+            
             ValidationResult results = messageValidator.Validate(message);
             if (results.IsValid)
             {
+                message.SenderMail = "rabiakavi@hotmail.com";
+                message.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 messageManager.MessageAdd(message);
-                return RedirectToAction("Inbox");
+                return RedirectToAction("Sendbox");
             }
             else
             {
@@ -59,6 +62,18 @@ namespace MvcProjectCamp.Controllers
                 }
             }
             return View();
+        }
+        public ActionResult DeleteMessage(int id)
+        {
+            var messageValue = messageManager.GetByID(id);
+            messageManager.MessageDelete(messageValue);
+            return RedirectToAction("Inbox");
+        }
+        public ActionResult InDrafts()
+        {
+            
+            var messageList = messageManager.GetListDrafts();
+            return View(messageList);
         }
     }
 }

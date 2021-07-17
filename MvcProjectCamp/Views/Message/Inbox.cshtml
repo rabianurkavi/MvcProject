@@ -70,20 +70,29 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                        <tr>
-                                            <td>
-                                                <div class="icheck-primary">
-                                                    <input type="checkbox" value="" id="check1">
-                                                    <label for="check1"></label>
-                                                </div>
-                                            </td>
-                                            <td class="mailbox-star"><a href="/Message/GetInboxDetails/@item.MessageId"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Message/GetInboxDetails/@item.MessageId">@item.SenderMail</a></td>
-                                            <td class="mailbox-subject">
-                                                <b>@item.Subject</b> - @item.MessageContent.Substring(0, 30)...
+                                    <tr>
+                                        <td>
+                                            <div class="icheck-primary">
+                                                <input type="checkbox" value="" id="check1">
+                                                <label for="check1"></label>
+                                            </div>
+                                        </td>
+                                        <td class="mailbox-star"><a href="/Message/GetInboxDetails/@item.MessageId"><i class="fas fa-star text-warning"></i></a></td>
+                                        <td class="mailbox-name"><a href="/Message/GetInboxDetails/@item.MessageId">@item.SenderMail</a></td>
+                                        <td class="mailbox-subject">
+                                            <b>@item.Subject</b> -  @if (item.MessageContent.Length >= 30)
+                                            {
+                                            
+                                                @Html.Raw(item.MessageContent.Substring(0, 30))
+                                                <text> ... </text>
+                                                }
+                                                else
+                                                {
+                                            <td>@Html.Raw(item.MessageContent)</td>
+                                            }
                                             </td>
                                             <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">5 mins ago</td>
+                                            <td class="mailbox-date">@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
                                         </tr>
                                     }
                                 </tbody>
