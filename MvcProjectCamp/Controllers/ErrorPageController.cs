@@ -17,7 +17,7 @@ namespace MvcProjectCamp.Controllers
         }
         public ActionResult Page404()
         {
-            Response.StatusCode = 404;//403 hata kodu için
+            Response.StatusCode = 404;//404 hata kodu için
             Response.TrySkipIisCustomErrors = true;
             return View();
         }
