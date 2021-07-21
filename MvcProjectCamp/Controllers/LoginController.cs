@@ -1,5 +1,9 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using EntityLayer.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,29 +15,44 @@ namespace MvcProjectCamp.Controllers
 {
     public class LoginController : Controller
     {
-        // GET: Login
-        [HttpGet]
+        AdminManager _adminManager = new AdminManager(new EfAdminDal());
+        // GET: Login 
         public ActionResult Index()
         {
             return View();
         }
-        [HttpPost]
-        public ActionResult Index(Admin admin)
+        [HttpGet]
+        public ActionResult AdminLogin()
         {
-            Context c = new Context();
-            var adminUserInfo = c.Admins.FirstOrDefault(x => x.AdminUserName == admin.AdminUserName && x.AdminPassword == admin.AdminPassword);
-            if(adminUserInfo!=null)
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AdminLogin(Admin admin)
+        {
+            //var userToLogin = _authService.Login(adminForLoginDto);
+            //if(userToLogin!=null)
+            //{
+            //    FormsAuthentication.SetAuthCookie(adminForLoginDto.AdminUserName, false);
+            //    Session["AdminUserName"] = adminForLoginDto.AdminUserName;
+            //    return RedirectToAction("Index", "AdminCategory");
+            //}
+            //else
+            //{
+
+            //    return RedirectToAction("Login");
+            //}
+            var adminLoginInfo = _adminManager.Login(admin);
+            if(adminLoginInfo!=null)
             {
-                FormsAuthentication.SetAuthCookie(adminUserInfo.AdminUserName,false);
-                Session["AdminUserName"] = adminUserInfo.AdminUserName;
-                //işlemler
+                FormsAuthentication.SetAuthCookie(adminLoginInfo.AdminUserName, false);
+                Session["AdminUserName"] = adminLoginInfo.AdminUserName;
                 return RedirectToAction("Index", "AdminCategory");
             }
             else
             {
                 return RedirectToAction("Index");
             }
-         
+
         }
     }
 }

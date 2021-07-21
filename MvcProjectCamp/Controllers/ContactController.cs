@@ -14,7 +14,7 @@ namespace MvcProjectCamp.Controllers
         ContactManager contactManager = new ContactManager(new EfContactDal());
         MessageManager messageManager = new MessageManager(new EfMessageDal());
         ContactValidator validationRules = new ContactValidator();
-        [Authorize]
+        //[Authorize]
         // GET: Contact
         public ActionResult Index()
         {

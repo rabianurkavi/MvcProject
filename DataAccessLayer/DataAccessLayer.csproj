@@ -120,6 +120,18 @@
     <Compile Include="Migrations\202107182011570_mig_admin_table.designer.cs">
       <DependentUpon>202107182011570_mig_admin_table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107211323147_mig_admin_change.cs" />
+    <Compile Include="Migrations\202107211323147_mig_admin_change.designer.cs">
+      <DependentUpon>202107211323147_mig_admin_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107211534405_mig_admin_change1.cs" />
+    <Compile Include="Migrations\202107211534405_mig_admin_change1.designer.cs">
+      <DependentUpon>202107211534405_mig_admin_change1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107211555000_mig_admin_change2.cs" />
+    <Compile Include="Migrations\202107211555000_mig_admin_change2.designer.cs">
+      <DependentUpon>202107211555000_mig_admin_change2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -166,6 +178,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107182011570_mig_admin_table.resx">
       <DependentUpon>202107182011570_mig_admin_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107211323147_mig_admin_change.resx">
+      <DependentUpon>202107211323147_mig_admin_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107211534405_mig_admin_change1.resx">
+      <DependentUpon>202107211534405_mig_admin_change1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107211555000_mig_admin_change2.resx">
+      <DependentUpon>202107211555000_mig_admin_change2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

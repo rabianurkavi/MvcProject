@@ -17,7 +17,7 @@ namespace MvcProjectCamp.Controllers
         MessageManager messageManager = new MessageManager(new EfMessageDal());
 
         // GET: Message
-        [Authorize]
+        //[Authorize]
         public ActionResult Inbox()
         {
             var messagelist = messageManager.GetListInbox();
