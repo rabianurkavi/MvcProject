@@ -37,31 +37,31 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public List<Admin> GetAdminUserByEmail(string email)
-        {
-            return _adminDal.List(x => x.AdminUserName == email);
-        }
+        //public List<Admin> GetAdminUserByEmail(string email)
+        //{
+        //    return _adminDal.List(x => x.AdminUserName == email);
+        //}
 
         public Admin GetById(int id)
         {
             return _adminDal.Get(x => x.AdminId == id);
         }
 
-        public Admin GetByMail(string email)
-        {
-            return _adminDal.Get(x => x.AdminUserName == email);
-        }
+        //public Admin GetByMail(string email)
+        //{
+        //    return _adminDal.Get(x => x.AdminUserName == email);
+        //}
 
         public List<Admin> GetList()
         {
             return _adminDal.List();
         }
 
-        public Admin Login(Admin admin)
-        {
-            Context context = new Context();
-            var adminLogin = context.Admins.SingleOrDefault(x => x.AdminUserName == admin.AdminUserName && x.AdminPassword == admin.AdminPassword);
-            return adminLogin;
-        }
+        //public Admin Login(Admin admin)
+        //{
+        //    Context context = new Context();
+        //    var adminLogin = context.Admins.SingleOrDefault(x => x.AdminUserName == admin.AdminUserName && x.AdminPassword == admin.AdminPassword);
+        //    return adminLogin;
+        //}
     }
 }

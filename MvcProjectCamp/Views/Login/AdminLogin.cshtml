@@ -1,9 +1,10 @@
-﻿@{
+﻿@model EntityLayer.Dto.AdminForLoginDto
+@{
     Layout = null;
 }
 
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
     <title>Admin Login</title>
     <meta charset="utf-8">
@@ -32,9 +33,10 @@
                         <p class="text-center">Lütfen oturum bilgilerinizi girin</p>
                         @using (Html.BeginForm("AdminLogin", "Login", FormMethod.Post))
                         {
+                            
                             <div class="form-group">
                                 <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
-                                <input type="text" class="form-control" name="AdminUserName" placeholder="Kullanıcı Adı" required>
+                                <input type="text" class="form-control" name="AdminMail" placeholder="Admin Mail" required>
                             </div>
                             <div class="form-group">
                                 <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-lock"></span></div>
@@ -67,3 +69,21 @@
 
 </body>
 </html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#logo').addClass('animated fadeInDown');
+        $("input:text:visible:first").focus();
+    });
+    $('#username').focus(function () {
+        $('label[for="username"]').addClass('selected');
+    });
+    $('#username').blur(function () {
+        $('label[for="username"]').removeClass('selected');
+    });
+    $('#password').focus(function () {
+        $('label[for="password"]').addClass('selected');
+    });
+    $('#password').blur(function () {
+        $('label[for="password"]').removeClass('selected');
+    });
+</script>

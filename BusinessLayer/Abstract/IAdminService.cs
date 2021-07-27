@@ -15,8 +15,8 @@ namespace BusinessLayer.Abstract
         List<Admin> GetList();
         Admin GetById(int id);
         Admin EditProfil(Admin admin, string password);
-        List<Admin> GetAdminUserByEmail(string email);
-        Admin GetByMail(string email);
-        Admin Login(Admin admin);
+        //List<Admin> GetAdminUserByEmail(string email);
+        //Admin GetByMail(string email);
+        //Admin Login(Admin admin);
     }
 }

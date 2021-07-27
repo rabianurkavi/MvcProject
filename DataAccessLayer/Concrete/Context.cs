@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete
 {
-    public class Context:DbContext
+    public class MvcKampContext:DbContext
     {
         public DbSet<About> Abouts { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -19,6 +19,8 @@ namespace DataAccessLayer.Concrete
         public DbSet<Message> Messages { get; set; }
         public DbSet<ImageFile> ImageFiles { get; set; }
         public DbSet<Admin> Admins { get; set; }
+       
+       
 
 
     }

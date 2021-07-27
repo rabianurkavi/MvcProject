@@ -11,42 +11,55 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    //public class AuthManager:IAuthService
-    //{
-    //    private IAdminService _adminService;
-    //    IAdminDal _adminDal;
-    //    public AuthManager(IAdminService adminService, IAdminDal adminDal)
-    //    {
-    //        _adminService = adminService;
-    //        _adminDal = adminDal;
-    //    }
+    public class AuthManager : IAuthService
+    {
+        IAdminService _adminService;
 
-    //    public Admin AdminExists(string email)
-    //    {
-    //        throw new NotImplementedException();
-    //    }
+        public AuthManager(IAdminService adminService)
+        {
+            _adminService = adminService;
 
-    //    public bool AdminLogin(AdminForLoginDto adminForLoginDto)
-    //    {
-    //        using (var crypto = new System.Security.Cryptography.HMACSHA512())
-    //        {
-    //            var mailHash = crypto.ComputeHash(Encoding.UTF8.GetBytes(adminForLoginDto.AdminMail));
-    //            var admin = _adminService.GetList();
-    //            foreach (var item in admin)
-    //            {
-    //                if (HashingHelper.AdminVerifyPasswordHash(adminForLoginDto.AdminMail, adminForLoginDto.AdminPassword, item.AdminMail,
-    //                    item.PasswordHash, item.PasswordSalt))
-    //                {
-    //                    return true;
-    //                }
-    //            }
-    //            return false;
-    //        }
-    //    }
+        }
 
-    //    public void AdminRegister(string adminUserName, string adminMail, string password)
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-    //}
+        public Admin AdminExists(string email)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool AdminLogin(AdminForLoginDto adminForLoginDto)
+        {
+            using (var crypto = new System.Security.Cryptography.HMACSHA512())
+            {
+                var mailHash = crypto.ComputeHash(Encoding.UTF8.GetBytes(adminForLoginDto.AdminMail));
+                var admin = _adminService.GetList();
+                foreach (var item in admin)
+                {
+                    if (HashingHelper.VerifyPasswordHash(adminForLoginDto.AdminMail, adminForLoginDto.AdminPassword, item.AdminMail,
+                        item.PasswordHash, item.PasswordSalt))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+
+        public void AdminRegister(string adminUserName, string adminMail, string password)
+        {
+            byte[] mailHash,passwordHash, passworSalt;
+            HashingHelper.CreatePasswordHash(adminMail, password,out mailHash, out passwordHash, out passworSalt);
+            var admin = new Admin
+            {
+                PasswordHash = passwordHash,
+                PasswordSalt = passworSalt,
+                AdminMail=mailHash,
+                AdminRole = "A",
+                AdminUserName = adminUserName,
+
+
+            };
+            _adminService.AdminAdd(admin);
+
+        }
+    }
 }

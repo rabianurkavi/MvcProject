@@ -16,13 +16,14 @@ namespace MvcProjectCamp.Controllers
         // GET: AdminCategory
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
 
-        [Authorize]
+        //[Authorize(Roles="B")]
         public ActionResult Index()
         {
             var categoryvalues = categoryManager.GetList();
             return View(categoryvalues);
         }
         [HttpGet]
+
         public ActionResult AddCategory()
         {     
             return View();

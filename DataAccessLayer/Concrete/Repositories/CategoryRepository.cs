@@ -14,7 +14,7 @@ namespace DataAccessLayer.Concrete.Repositories
     //AMELELİK YAPIYORUZ
     public class CategoryRepository : ICategoryDal
     {
-        Context context = new Context();
+        MvcKampContext context = new MvcKampContext();
         DbSet<Category> _categories;
         public void Delete(Category category)
         {

@@ -13,10 +13,12 @@ using System.Web.Security;
 
 namespace MvcProjectCamp.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
+        IAuthService authService = new AuthManager(new AdminManager(new EfAdminDal()));
         AdminManager _adminManager = new AdminManager(new EfAdminDal());
-        // GET: Login 
+       // GET: Login
         public ActionResult Index()
         {
             return View();
@@ -27,32 +29,30 @@ namespace MvcProjectCamp.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult AdminLogin(Admin admin)
+        public ActionResult AdminLogin(AdminForLoginDto adminForLoginDto)
         {
-            //var userToLogin = _authService.Login(adminForLoginDto);
-            //if(userToLogin!=null)
-            //{
-            //    FormsAuthentication.SetAuthCookie(adminForLoginDto.AdminUserName, false);
-            //    Session["AdminUserName"] = adminForLoginDto.AdminUserName;
-            //    return RedirectToAction("Index", "AdminCategory");
-            //}
-            //else
-            //{
-
-            //    return RedirectToAction("Login");
-            //}
-            var adminLoginInfo = _adminManager.Login(admin);
-            if(adminLoginInfo!=null)
+            
+            if (authService.AdminLogin(adminForLoginDto))
             {
-                FormsAuthentication.SetAuthCookie(adminLoginInfo.AdminUserName, false);
-                Session["AdminUserName"] = adminLoginInfo.AdminUserName;
-                return RedirectToAction("Index", "AdminCategory");
+                FormsAuthentication.SetAuthCookie(adminForLoginDto.AdminMail, false);
+                Session["AdminMail"] = adminForLoginDto.AdminMail;
+                var session = Session["AdminMail"];
+                ViewBag.a = session;
+                return RedirectToAction("Index", "Heading");
             }
             else
             {
-                return RedirectToAction("Index");
+                ViewData["Hata"] = "Kullanıcı adı veya parola yanlış lütfen tekrar deneyin.";
+                return RedirectToAction("AdminLogin");
             }
 
         }
+        public ActionResult AdminLogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("AdminLogin", "Login");
+        }
+
     }
 }
