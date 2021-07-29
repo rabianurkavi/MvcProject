@@ -1,7 +1,7 @@
 ﻿@model EntityLayer.Concrete.Message
 @{
     ViewBag.Title = "GetInboxDetails";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 <!DOCTYPE html>
 <html>
@@ -27,7 +27,7 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                @Html.Action("MessageListMenu", "WriterPanelMessage")
+                @Html.Action("ContactPartial", "Contact")
                 <div class="col-md-9">
                     <div class="card card-primary card-outline">
                         <div class="card-header">
@@ -55,7 +55,7 @@
                             <!-- /.mailbox-read-message -->
                             <div class="mailbox-controls with-border text-center">
                                 <div class="btn-group">
-                                    <button  type="button" class ="btn btn-danger" data-toggle="tooltip" data-container="body" title="Delete">
+                                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-container="body" title="Delete">
                                         <i class="far fa-trash-alt"></i>   Sil
                                     </button>
                                     <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Reply">
@@ -84,4 +84,6 @@
     </section>
 </body>
 </html>
+
+
 
