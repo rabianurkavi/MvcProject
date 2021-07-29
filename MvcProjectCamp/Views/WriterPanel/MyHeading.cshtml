@@ -1,0 +1,204 @@
+﻿@using EntityLayer.Concrete
+@model List<Heading>
+@{
+    ViewBag.Title = "MyHeading";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+@{ string color = "";
+    string colorstatus = "";
+    string statusname = "";
+    string iconname = "";
+}
+
+@*<br/>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Başlık</th>
+            <th>Kategori</th>
+            <th>Yazar</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.HeadingId</td>
+                <td>@item.HeadingName</td>
+                <td>@item.Category.CategoryName</td>
+                <td>@item.Writer.WriterName @item.Writer.WriterSurName</td>
+            </tr>
+        }
+    </table>
+    <br/>
+    <a href="/Heading/AddHeading/" class="btn btn-info" >Yeni Başlık Girişi</a>*@
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+
+    <!-- Content Wrapper. Contains page content -->
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Projects</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Proje İşlemleri</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th style="width: 1%">
+                                #
+                            </th>
+                            <th style="width: 20%">
+                                Başlık Adı
+                            </th>
+                            <th style="width: 15%">
+                                Oluşturan Yazar
+                            </th>                    
+                            <th style="width: 8%" class="text-center">
+                                Kategori
+                            </th>
+                            <th style="width: 20%">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            if (item.Category.CategoryName == "Tiyatro")
+                            {
+                                color = "badge badge-warning";
+                            }
+                            if (item.Category.CategoryName == "Sağlık")
+                            {
+                                color = "badge badge-success";
+                            }
+                            if (item.Category.CategoryName == "Eğitim")
+                            {
+                                color = "badge badge-primary";
+                            }
+                            if (item.Category.CategoryName == "Kitap")
+                            {
+                                color = "badge badge-pill";
+                            }
+                            if (item.Category.CategoryName == "Yazılım")
+                            {
+                                color = "badge badge-light";
+                            }
+                            if (item.Category.CategoryName == "Yaşam")
+                            {
+                                color = "badge badge-info";
+                            }
+                            if (item.Category.CategoryName == "Oyun")
+                            {
+                                color = "badge badge-warning";
+                            }
+                            if (item.Category.CategoryName == "Spor")
+                            {
+                                color = "badge badge-secondary";
+                            }
+                            if (item.Category.CategoryName == "Moda")
+                            {
+                                color = "badge badge-secondary";
+                            }
+                            if (item.Category.CategoryName == "Film")
+                            {
+                                color = "badge badge-info";
+                            }
+                            if (item.Category.CategoryName == "Kitap")
+                            {
+                                color = "badge badge-danger";
+                            }
+                            if (item.HeadingStatus == false)
+                            {
+                                colorstatus = "btn btn-success";
+                                iconname = "fa fa-play-circle";
+                                statusname = "Aktif";
+                            }
+                            if (item.HeadingStatus == true)
+                            {
+                                colorstatus = "btn btn-danger";
+                                iconname = "fa fa-pause-circle";
+                                statusname = "Pasif";
+                            }
+
+
+                            <tr>
+                                <td>
+                                    @item.HeadingId
+                                </td>
+                                <td>
+                                    <a>
+                                        @item.HeadingName
+                                    </a>
+                                    <br />
+                                    <small>
+                                        @item.HeadingDate
+                                    </small>
+                                </td>
+                                <td>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <img alt="Avatar" class="table-avatar" src="@item.Writer.WriterImage">
+                                            @item.Writer.WriterName @item.Writer.WriterSurName
+                                        </li>
+                                    </ul>
+                                </td>                             
+                                <td class="project-state">
+                                    <span class="@color">@item.Category.CategoryName</span>
+                                </td>
+                                <td class="project-actions text-right">
+                                    <a class="btn btn-primary btn-sm" href="/Content/ContentByHeading/@item.HeadingId
+                                      ">
+                                        <i class="fas fa-folder">
+                                        </i>
+                                        İçerikler
+                                    </a>
+                                    <a class="btn btn-info btn-sm" href="/WriterPanel/UpdateHeading/@item.HeadingId">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Düzenle
+                                    </a>
+                                    <a class="@colorstatus" href="/WriterPanel/DeleteHeading/@item.HeadingId">
+                                        <i class="@iconname">
+                                        </i>
+                                        @statusname
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+    </section>
+    <br />
+    <a href="/Heading/AddHeading/" class="btn btn-primary">Yeni Başlık Girişi</a>
+</body>
+</html>
+

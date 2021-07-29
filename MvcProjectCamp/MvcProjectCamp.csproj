@@ -148,6 +148,8 @@
     <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
+    <Compile Include="Controllers\WriterPanelControllers\WriterPanelController.cs" />
+    <Compile Include="Controllers\WriterPanelControllers\WriterPanelMessageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2619,6 +2621,14 @@
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Authorization\AddAdmin.cshtml" />
     <Content Include="Views\Authorization\Index.cshtml" />
+    <Content Include="Views\Shared\_WriterLayout.cshtml" />
+    <Content Include="Views\WriterPanel\WriterProfile.cshtml" />
+    <Content Include="Views\WriterPanel\MyHeading.cshtml" />
+    <Content Include="Views\WriterPanel\NewHeading.cshtml" />
+    <Content Include="Views\WriterPanel\UpdateHeading.cshtml" />
+    <Content Include="Views\WriterPanelMessage\Inbox.cshtml" />
+    <Content Include="Views\WriterPanelMessage\MessageListMenu.cshtml" />
+    <Content Include="Views\WriterPanelMessage\Sendbox.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
