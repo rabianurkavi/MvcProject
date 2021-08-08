@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Abstract;
 using BusinessLayer.Security;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using EntityLayer.Dto;
 using System;
@@ -14,10 +15,12 @@ namespace BusinessLayer.Concrete
     public class AuthManager : IAuthService
     {
         IAdminService _adminService;
+        IWriterService _writerService;
 
-        public AuthManager(IAdminService adminService)
+        public AuthManager(IAdminService adminService,IWriterService writerService)
         {
             _adminService = adminService;
+            _writerService = writerService;
 
         }
 
@@ -60,6 +63,26 @@ namespace BusinessLayer.Concrete
             };
             _adminService.AdminAdd(admin);
 
+        }
+        public Writer WriterLogin(string writerMail, string writerPassword)
+        {
+            MvcKampContext mvcKampContext = new MvcKampContext();
+            return mvcKampContext.Writers.FirstOrDefault(x => x.WriterMail == writerMail && x.WriterPassword == writerPassword);
+        }
+
+        public void WriterRegister(string writerName, string writerSurName, string writerAbout,string writerMail, string Title, string writerPassword, bool writerStatus)
+        {
+            var writer = new Writer
+            {
+                WriterName = writerName,
+                WriterSurName = writerSurName,
+                WriterAbout = writerAbout,
+                WriterTitle = Title,
+                WriterMail = writerMail,
+                WriterPassword = writerPassword,
+                WriterStatus = writerStatus
+            };
+            _writerService.WriterAdd(writer);
         }
     }
 }

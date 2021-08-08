@@ -13,7 +13,7 @@ namespace MvcProjectCamp.Controllers
     [AllowAnonymous]
     public class RegisterController : Controller
     {
-        IAuthService _authService = new AuthManager(new AdminManager(new EfAdminDal()));
+        IAuthService _authService = new AuthManager(new AdminManager(new EfAdminDal()),new WriterManager(new EfWriterDal()));
         // GET: Register
         [HttpGet]
         public ActionResult Index()

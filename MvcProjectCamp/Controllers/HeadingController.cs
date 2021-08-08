@@ -44,6 +44,7 @@ namespace MvcProjectCamp.Controllers
         public ActionResult AddHeading(Heading heading)
         {
             heading.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            heading.HeadingStatus = true;
             headingManager.HeadingAdd(heading);
             return View("Index");
         }

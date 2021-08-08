@@ -13,6 +13,8 @@ namespace BusinessLayer.Abstract
         bool AdminLogin(AdminForLoginDto adminForLoginDto);
         Admin AdminExists(string email);
         void AdminRegister(string adminUserName, string adminMail,string password);
+        Writer WriterLogin(string writerMail,string writerPassword);
+        void WriterRegister(string writerName, string writerSurName, string writerAbout,string writerMail,string Title, string writerPassword, bool writerStatus);
 
     }
 }

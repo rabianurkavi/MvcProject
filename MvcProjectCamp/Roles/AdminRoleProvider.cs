@@ -1,7 +1,10 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Security;
 
@@ -9,6 +12,7 @@ namespace MvcProjectCamp.Roles
 {
     public class AdminRoleProvider : RoleProvider
     {
+        AdminManager adminManager = new AdminManager(new EfAdminDal());
         public override string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public override void AddUsersToRoles(string[] usernames, string[] roleNames)
@@ -38,10 +42,29 @@ namespace MvcProjectCamp.Roles
 
         public override string[] GetRolesForUser(string username)
         {
-            //Context context = new Context();
-            //var x = context.Admins.FirstOrDefault(y => y.AdminUserName == username);
-            //return new string[] { x.AdminRole };
-            throw new NotImplementedException();
+            using (var crypto = new System.Security.Cryptography.HMACSHA512())
+            {
+                var mailCrypto = crypto.ComputeHash(Encoding.UTF8.GetBytes(username));
+                var admin = adminManager.GetList();
+
+                if (admin != null)
+                {
+                    foreach (var item in admin)
+                    {
+                        for (int i = 0; i < mailCrypto.Length; i++)
+                        {
+                            if (mailCrypto[i] == item.AdminMail[i])
+                            {
+                                return new string[] { item.AdminRole };
+                            }
+                        }
+                    }
+                }
+
+                return new string[] { };
+
+            }
+
         }
 
         public override string[] GetUsersInRole(string roleName)

@@ -83,6 +83,7 @@
     <Compile Include="Concrete\Message.cs" />
     <Compile Include="Concrete\Writer.cs" />
     <Compile Include="Dto\AdminForLoginDto.cs" />
+    <Compile Include="Dto\WriterForLoginDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
