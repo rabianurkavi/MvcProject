@@ -80,6 +80,10 @@
     <Compile Include="Migrations\202107261140297_MvcKampContext.designer.cs">
       <DependentUpon>202107261140297_MvcKampContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108091436112_mig-headingname-stringlength.cs" />
+    <Compile Include="Migrations\202108091436112_mig-headingname-stringlength.designer.cs">
+      <DependentUpon>202108091436112_mig-headingname-stringlength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -96,6 +100,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202107261140297_MvcKampContext.resx">
       <DependentUpon>202107261140297_MvcKampContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108091436112_mig-headingname-stringlength.resx">
+      <DependentUpon>202108091436112_mig-headingname-stringlength.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -138,6 +138,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
@@ -331,6 +332,7 @@
     <Content Include="AdminLTE-3.0.4\imagee\fatma.jpg" />
     <Content Include="AdminLTE-3.0.4\imagee\fatmanur.jpg" />
     <Content Include="AdminLTE-3.0.4\imagee\feyza.jpg" />
+    <Content Include="AdminLTE-3.0.4\imagee\Full_Moon_Luc_Viatour.jpg" />
     <Content Include="AdminLTE-3.0.4\imagee\hakan.jpg" />
     <Content Include="AdminLTE-3.0.4\imagee\rabia.jpg" />
     <Content Include="AdminLTE-3.0.4\imagee\ugur.jpg" />
@@ -2103,12 +2105,26 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="image\4-clipart-sun-1.png" />
+    <Content Include="image\908.png" />
     <Content Include="image\anaekran.jpg" />
     <Content Include="image\ayse.jpg" />
     <Content Include="image\büsra.jpg" />
     <Content Include="image\canan.jpg" />
+    <Content Include="image\ddew09c-c2391277-0f26-454b-ba85-03ee53205bca.png" />
+    <Content Include="image\download.png" />
     <Content Include="image\hakan.jpg" />
+    <Content Include="image\logo.png" />
+    <Content Include="image\nci-s-zl-k-dictionary-ek-i-s-zl-k-clip-art-png-favpng-WWNmfFKbJar0LKrx2SGNwa36S.jpg" />
+    <Content Include="image\papatt.png" />
+    <Content Include="image\papatya.png" />
+    <Content Include="image\papatya1.jpg" />
+    <Content Include="image\png-transparent-sport-logo-football-sports-logos-text-sport-logo.png" />
     <Content Include="image\rabia.jpg" />
+    <Content Include="image\sölük.png" />
+    <Content Include="image\unnamed.png" />
+    <Content Include="image\yaprak 2.png" />
+    <Content Include="image\yaprak.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="AdminLTE-3.0.4\.babelrc" />
@@ -2750,6 +2766,11 @@
     <Content Include="Views\WriterPanelMessage\NewMessage.cshtml" />
     <Content Include="Views\WriterPanelContent\MyContent.cshtml" />
     <Content Include="Views\Login\WriterLogin.cshtml" />
+    <Content Include="Views\Default\Headings.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\WriterPanel\AllHeading.cshtml" />
+    <Content Include="Views\WriterPanelContent\AddContent.cshtml" />
+    <Content Include="Views\WriterPanelContent\ToDoList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

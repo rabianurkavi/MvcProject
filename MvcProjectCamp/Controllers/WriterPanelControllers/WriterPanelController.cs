@@ -79,5 +79,10 @@ namespace MvcProjectCamp.Controllers.WriterPanelControllers
             headingManager.HeadingDelete(headingValue);
             return RedirectToAction("index");
         }
+        public ActionResult AllHeading()
+        {
+            var headings = headingManager.GetList();
+            return View(headings);
+        }
     }
 }

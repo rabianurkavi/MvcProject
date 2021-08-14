@@ -79,7 +79,7 @@ namespace MvcProjectCamp.Controllers
         {
             FormsAuthentication.SignOut();
             Session.Abandon();
-            return RedirectToAction("WriterLogin", "Login");
+            return RedirectToAction("Headings", "Default");
         }
 
     }

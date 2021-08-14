@@ -33,3 +33,4 @@ C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\bin\Debug\tr\System.W
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\bin\Debug\tr\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.MvcKampContext.resources
 C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+C:\Users\Hakan\source\repos\MvcProjectCamp\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migheadingnamestringlength.resources
