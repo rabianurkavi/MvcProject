@@ -29,3 +29,33 @@ C:\Users\Hakan\source\repos\MvcProjectCamp\EntityLayer\bin\Debug\tr\System.Web.R
 C:\Users\Hakan\source\repos\MvcProjectCamp\EntityLayer\bin\Debug\tr\System.Web.WebPages.resources.dll
 C:\Users\Hakan\source\repos\MvcProjectCamp\EntityLayer\bin\Debug\tr\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Hakan\source\repos\MvcProjectCamp\EntityLayer\bin\Debug\tr\System.Web.WebPages.Razor.resources.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\EntityFramework.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.Helpers.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.Mvc.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.Razor.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.WebPages.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\EntityFramework.xml
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.Helpers.xml
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.Mvc.xml
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.Razor.xml
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.WebPages.xml
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\tr\System.Web.Helpers.resources.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\tr\System.Web.Mvc.resources.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\tr\System.Web.Razor.resources.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\tr\System.Web.WebPages.resources.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\tr\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\bin\Debug\tr\System.Web.WebPages.Razor.resources.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\Rabia Nur\Desktop\MvcProject-main (1)\MvcProject-main\EntityLayer\obj\Debug\EntityLayer.pdb

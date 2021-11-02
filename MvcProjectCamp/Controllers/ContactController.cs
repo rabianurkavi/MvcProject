@@ -28,14 +28,14 @@ namespace MvcProjectCamp.Controllers
             var contactValues = contactManager.GetById(id);
             return View(contactValues);
         }
-        public PartialViewResult ContactPartial()
+        public PartialViewResult ContactPartial(string p)
         {
            
             var result = contactManager.GetList().Count();
             ViewBag.vlc = result;
-            var sendMail = messageManager.GetListSendbox().Count();
+            var sendMail = messageManager.GetListSendbox(p).Count();
             ViewBag.sendMail = sendMail;
-            var inMail = messageManager.GetListInbox().Count();
+            var inMail = messageManager.GetListInbox(p).Count();
             ViewBag.inMail = inMail;
             return PartialView();
         }

@@ -18,14 +18,15 @@ namespace MvcProjectCamp.Controllers
 
         // GET: Message
         //[Authorize]
-        public ActionResult Inbox()
+        public ActionResult Inbox(string p)
         {
-            var messagelist = messageManager.GetListInbox();
+
+            var messagelist = messageManager.GetListInbox(p);
             return View(messagelist);
         }
-        public ActionResult Sendbox()
+        public ActionResult Sendbox(string p)
         {
-            var messagelist = messageManager.GetListSendbox();
+            var messagelist = messageManager.GetListSendbox(p);
             return View(messagelist);
         }
         public ActionResult GetInboxDetails(int id)
