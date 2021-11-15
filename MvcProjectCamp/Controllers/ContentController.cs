@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
@@ -14,21 +15,29 @@ namespace MvcProjectCamp.Controllers
     public class ContentController : Controller
     {
         // GET: Content
+        HeadingManager headingManager = new HeadingManager(new EfHeadingDal());
         ContentManager contentManager = new ContentManager(new EfContentDal());
+       
         public ActionResult Index()
         {
             return View();
         }
         public ActionResult ContentByHeading(int id)
         {
+
             var contentValues = contentManager.GetListHeadingById(id);
             return View(contentValues);
         }
-        public ActionResult GetContentList()
+        public ActionResult GetAllContent(string p)
         {
-            var contentValues = contentManager.GetList();//getall da olabilir
-            return View(contentManager);
+            var values = contentManager.GetList(p);
+            return View(values.ToList());
         }
+        //public ActionResult GetContentList()
+        //{
+        //    var contentValues = contentManager.GetList();//getall da olabilir
+        //    return View(contentManager);
+        //}
         [HttpGet]
         public ActionResult AddContent()
         {

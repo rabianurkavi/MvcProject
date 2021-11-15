@@ -2,6 +2,8 @@
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
+using PagedList;
+using PagedList.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,9 +17,9 @@ namespace MvcProjectCamp.Controllers
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         WriterManager writerManager = new WriterManager(new EfWriterDal());
         // GET: Heading
-        public ActionResult Index()
+        public ActionResult Index(int p=1)
         {
-            var headingValues = headingManager.GetList();
+            var headingValues = headingManager.GetList().ToPagedList(p, 4);
             return View(headingValues);
         }
         [HttpGet]

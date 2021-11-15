@@ -22,6 +22,11 @@ namespace BusinessLayer.Concrete
             return _messageDal.Get(x => x.MessageId == id);
         }
 
+        public List<Message> ListInbox()
+        {
+            return _messageDal.List(x=>x.SenderMail=="admin@gmail.com");
+        }
+
         public List<Message> GetListDrafts()
         {
             return _messageDal.List(x => x.SenderMail == "rabiakavi@hotmail.com");
@@ -49,6 +54,11 @@ namespace BusinessLayer.Concrete
         public void MessageUpdate(Message message)
         {
             _messageDal.Update(message);
+        }
+
+        public List<Message> ListSendBox()
+        {
+            return _messageDal.List(x => x.ReceiverMail == "admin@gmail.com");
         }
     }
 }

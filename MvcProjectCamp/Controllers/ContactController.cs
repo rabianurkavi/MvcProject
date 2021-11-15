@@ -33,9 +33,9 @@ namespace MvcProjectCamp.Controllers
            
             var result = contactManager.GetList().Count();
             ViewBag.vlc = result;
-            var sendMail = messageManager.GetListSendbox(p).Count();
+            var sendMail = messageManager.ListInbox().Count();
             ViewBag.sendMail = sendMail;
-            var inMail = messageManager.GetListInbox(p).Count();
+            var inMail = messageManager.ListSendBox().Count();
             ViewBag.inMail = inMail;
             return PartialView();
         }

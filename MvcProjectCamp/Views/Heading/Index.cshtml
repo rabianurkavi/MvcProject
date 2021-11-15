@@ -1,14 +1,16 @@
 ﻿@using EntityLayer.Concrete
-@model List<Heading>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Heading>
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; 
 }
+
 @{ string color = "";
     string colorstatus = "";
     string statusname = "";
-    string iconname = "";
-}
+    string iconname = ""; }
 
 @*<br/>
     <table class="table table-bordered">
@@ -148,53 +150,52 @@
                             }
 
 
-                            <tr>
-                                <td>
-                                    @item.HeadingId
-                                </td>
-                                <td>
-                                    <a>
-                                        @item.HeadingName
-                                    </a>
-                                    <br />
-                                    <small>
-                                        @item.HeadingDate
-                                    </small>
-                                </td>
-                                <td>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <img alt="Avatar" class="table-avatar" src="@item.Writer.WriterImage">
-                                            @item.Writer.WriterName @item.Writer.WriterSurName
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td >
-                                     @item.HeadingStatus
-                                </td>
-                                <td class="project-state">
-                                    <span class="@color">@item.Category.CategoryName</span>
-                                </td>
-                                <td class="project-actions text-right">
-                                    <a class="btn btn-primary btn-sm" href="/Content/ContentByHeading/@item.HeadingId
+            <tr>
+                <td>
+                    @item.HeadingId
+                </td>
+                <td>
+                    <a>
+                        @item.HeadingName
+                    </a>
+                    <br />
+                    <small>
+                        @item.HeadingDate
+                    </small>
+                </td>
+                <td>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <img alt="Avatar" class="table-avatar" src="/image/@item.Writer.WriterImage">
+                            @item.Writer.WriterName @item.Writer.WriterSurName
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    @item.HeadingStatus
+                </td>
+                <td class="project-state">
+                    <span class="@color">@item.Category.CategoryName</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-primary btn-sm" href="/Content/ContentByHeading/@item.HeadingId
                                       ">
-                                        <i class="fas fa-folder">
-                                        </i>
-                                        İçerikler
-                                    </a>
-                                    <a class="btn btn-info btn-sm" href="/Heading/UpdateHeading/@item.HeadingId">
-                                        <i class="fas fa-pencil-alt">
-                                        </i>
-                                        Düzenle
-                                    </a>
-                                    <a class="@colorstatus" href="/Heading/DeleteHeading/@item.HeadingId">
-                                        <i class="@iconname">
-                                        </i>
-                                        @statusname
-                                    </a>
-                                </td>
-                            </tr>
-                        }
+                        <i class="fas fa-folder">
+                        </i>
+                        İçerikler
+                    </a>
+                    <a class="btn btn-info btn-sm" href="/Heading/UpdateHeading/@item.HeadingId">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Düzenle
+                    </a>
+                    <a class="@colorstatus" href="/Heading/DeleteHeading/@item.HeadingId">
+                        <i class="@iconname">
+                        </i>
+                        @statusname
+                    </a>
+                </td>
+            </tr>}
                     </tbody>
                 </table>
             </div>
@@ -207,3 +208,8 @@
     <a href="/Heading/AddHeading/" class="btn btn-primary">Yeni Başlık Girişi</a>
 </body>
 </html>
+@Html.PagedListPager((IPagedList)Model, p => Url.Action("Index", new { p }), new PagedListRenderOptions
+{
+    LiElementClasses = new List<string>
+{ "page-link"}
+})

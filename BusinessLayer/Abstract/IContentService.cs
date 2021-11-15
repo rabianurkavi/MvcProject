@@ -12,7 +12,7 @@ namespace BusinessLayer.Abstract
         void ContentAdd(Content content);
         void ContentDelete(Content content);
         void ContentUpdate(Content content);
-        List<Content> GetList();
+        List<Content> GetList(string p);
         List<Content> GetListByWriter(int id);
         List<Content> GetListHeadingById(int id);
         Content GetById(int id);

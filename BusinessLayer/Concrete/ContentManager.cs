@@ -32,9 +32,9 @@ namespace BusinessLayer.Concrete
             return _contentDal.Get(x => x.ContentId == id);
         }
 
-        public List<Content> GetList()
+        public List<Content> GetList(string p)
         {
-            return _contentDal.List();
+            return _contentDal.List(x=>x.ContentValue.Contains(p));
         }
 
         public void ContentUpdate(Content content)

@@ -1,28 +1,54 @@
 ﻿@using EntityLayer.Concrete
 @model List<About>
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
 
 <h2>Hakkımda Veri Listesi</h2>
-<table class="table table-bordered">
-    <tr>
-        <th>Id</th>
-        <th>Hakkımda Başlığı</th>
-        <th>Aktif Yap</th>
-        <th>Pasif Yap</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.AboutId</td>
-            <td>Başlık</td>
-            <td><a href="#" class="btn btn-warning">Aktif Yap</a></td>
-            <td><a href="#" class="btn btn-danger">Pasif Yap</a></td>
-        </tr>
-    }
-</table>
+<div class="card-body p-0">
+    <table class="table table-striped projects">
+        <thead>
+            <tr>
+                <th style="width: 1%">
+                    #
+                </th>
+                <th style="width: 20%">
+                    Hakkımda
+                </th>
+                
+                <th style="width: 15%">
+                    Görseller
+                </th>
+                <th style="width: 20%">
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+<tr>
+    <td>
+        @item.AboutId
+    </td>
+    <td>
+        <a>
+            @item.AboutDetails1
+        </a>
+        <br />
+        <small>
+            @item.AboutDetails2
+        </small>
+    </td>
+    <td>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <img alt="Avatar" class="table-avatar" src="~/image/@item.AboutImage1">
 
-<br/>
-@Html.Action("AboutPartial","About")
+            </li>
+        </ul>
+    </td>
+</tr>
+}
+        </tbody>
+    </table>
+</div>
+@Html.Action("AboutPartial", "About")

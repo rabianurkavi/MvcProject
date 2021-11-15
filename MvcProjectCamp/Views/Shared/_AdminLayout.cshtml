@@ -59,9 +59,9 @@ to get the desired effect
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-         with font-awesome or any other icon font library -->
+    with font-awesome or any other icon font library -->
                         @*@if(User.IsInRole("B"))
-                        {*@
+        {*@
                         <li class="nav-item has-treeview ">
                             <a href="/AdminCategory/Index/" class="nav-link ">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -78,6 +78,14 @@ to get the desired effect
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Başlıklar
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href=/Content/GetAllContent/ class="nav-link">
+                                <i class="nav-icon fas fa-bahai"></i>
+                                <p>
+                                    Yazılar
                                 </p>
                             </a>
                         </li>
@@ -136,7 +144,7 @@ to get the desired effect
                                 </p>
                             </a>
                         </li>
-                        
+
 
                         <li class="nav-item">
                             <a href="pages/calendar.html" class="nav-link">
@@ -159,7 +167,7 @@ to get the desired effect
                             <a href="/ErrorPage/Page404/" class="nav-link">
                                 <i class="nav-icon far fa-envelope"></i>
                                 <p>
-                                    Hata Sayfaları                                 
+                                    Hata Sayfaları
                                 </p>
                             </a>
 
@@ -169,17 +177,17 @@ to get the desired effect
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
                                     Siteye Git
-                                  
+
                                 </p>
                             </a>
 
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="/Login/AdminLogOut/" class="nav-link">
                                 <i class="nav-icon fas fa-apple-alt"></i>
                                 <p>
                                     Çıkış Yap
-                                   
+
                                 </p>
                             </a>
 
